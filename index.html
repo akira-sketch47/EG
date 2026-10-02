@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f8f6">
+    <title>Portal do Paciente | Clínica Vitalis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page-shell">
+        <section class="auth-card" aria-labelledby="page-title">
+            <header class="brand">
+                <div class="brand-mark" aria-hidden="true">+</div>
+                <span>CLÍNICA VITALIS</span>
+            </header>
+
+            <div class="intro">
+                <p class="eyebrow">CUIDADO FEITO PARA VOCÊ</p>
+                <h1 id="page-title">Sua saúde em boas mãos.</h1>
+                <p class="intro-copy">Acesse sua área de paciente ou crie uma conta para cuidar da sua saúde com a nossa equipe médica.</p>
+            </div>
+
+            <div class="form-card">
+                <div class="tabs" role="tablist" aria-label="Acesso ao portal">
+                    <button class="tab active" id="tab-login" type="button" role="tab" aria-selected="true" aria-controls="painel-login">Entrar</button>
+                    <button class="tab" id="tab-cadastro" type="button" role="tab" aria-selected="false" aria-controls="painel-cadastro">Criar conta</button>
+                </div>
+
+                <section class="tab-panel" id="painel-login" role="tabpanel" aria-labelledby="tab-login">
+                    <h2>Bem-vindo de volta</h2>
+                    <p class="panel-copy">Entre para acessar sua área de paciente.</p>
+                    <form id="form-login" novalidate>
+                        <div class="field-group">
+                            <label for="login-email">E-mail</label>
+                            <input type="email" id="login-email" name="email" placeholder="voce@exemplo.com" autocomplete="email" aria-describedby="login-email-erro">
+                            <span class="field-error" id="login-email-erro"></span>
+                        </div>
+                        <div class="field-group">
+                            <label for="login-senha">Senha</label>
+                            <input type="password" id="login-senha" name="senha" placeholder="Sua senha" autocomplete="current-password" aria-describedby="login-senha-erro">
+                            <span class="field-error" id="login-senha-erro"></span>
+                        </div>
+                        <button class="submit-button" type="submit">Entrar na minha conta <span aria-hidden="true">→</span></button>
+                    </form>
+                </section>
+
+                <section class="tab-panel" id="painel-cadastro" role="tabpanel" aria-labelledby="tab-cadastro" hidden>
+                    <h2>Cadastre-se como paciente</h2>
+                    <p class="panel-copy">Crie seu acesso para se conectar à Clínica Vitalis.</p>
+                    <form id="form-cadastro" novalidate>
+                        <div class="field-group">
+                            <label for="cadastro-nome">Nome completo</label>
+                            <input type="text" id="cadastro-nome" name="nome" placeholder="Como podemos te chamar?" autocomplete="name" aria-describedby="cadastro-nome-erro">
+                            <span class="field-error" id="cadastro-nome-erro"></span>
+                        </div>
+                        <div class="field-group">
+                            <label for="cadastro-email">E-mail</label>
+                            <input type="email" id="cadastro-email" name="email" placeholder="voce@exemplo.com" autocomplete="email" aria-describedby="cadastro-email-erro">
+                            <span class="field-error" id="cadastro-email-erro"></span>
+                        </div>
+                        <div class="field-row">
+                            <div class="field-group">
+                                <label for="cadastro-senha">Senha</label>
+                                <input type="password" id="cadastro-senha" name="senha" placeholder="Mínimo 6 caracteres" autocomplete="new-password" aria-describedby="cadastro-senha-erro">
+                                <span class="field-error" id="cadastro-senha-erro"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="cadastro-confirmar">Confirmar senha</label>
+                                <input type="password" id="cadastro-confirmar" name="confirmar" placeholder="Repita a senha" autocomplete="new-password" aria-describedby="cadastro-confirmar-erro">
+                                <span class="field-error" id="cadastro-confirmar-erro"></span>
+                            </div>
+                        </div>
+                        <p class="password-hint">Use pelo menos 6 caracteres e inclua um número.</p>
+                        <button class="submit-button" type="submit">Criar minha conta <span aria-hidden="true">→</span></button>
+                    </form>
+                </section>
+
+                <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+            </div>
+
+            <footer class="card-footer">
+                <span class="lock-icon" aria-hidden="true">●</span>
+                Seus dados ficam salvos neste navegador para fins de demonstração.
+            </footer>
+        </section>
+        <p class="page-note">CUIDAR • ACOLHER • TRANSFORMAR</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
